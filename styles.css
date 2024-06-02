@@ -1,7 +1,7 @@
 html,body{
     margin:0;
     padding:0;
-    background-color: #F5F5F5;
+    background-color: #DEDEDE;
     font-family: "Smythe", system-ui;
 }
 
@@ -47,5 +47,67 @@ header .container {
 
 .banner-text h3{
     font-size: 22px;
+    line-height: 13px;
+
 }
 
+main .container{
+    background-color:#F5F5F5 ;
+}
+
+.menu{
+    padding:65px 45px ;
+}
+
+.menu-item{
+    height:150px;
+    border-bottom:1px solid #DEDEDE;
+    display: flex;
+    align-items: flex-start;
+    gap:30px;
+    margin-bottom: 45px;
+}
+
+.item-img{
+    width: 70px;
+   
+}
+
+.plus-circle{
+    width:50px;
+    height: 50px;
+    border:1px solid #DEDEDE;
+    border-radius: 50%;
+    margin-left:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-solid{
+    font-weight: 100;
+    color:#3C3C3C;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.item-name,.item-incredients,.item-price{
+    margin:0;
+    padding:0;
+}
+
+.item-name{
+    font-size: 28px;
+}
+
+.item-incredients{
+    color:#8B8B8B;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 8px;
+}
+
+.item-price{
+    font-size: 20px;
+    line-height: 24px;
+}
