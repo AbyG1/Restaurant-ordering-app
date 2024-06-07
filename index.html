@@ -39,7 +39,20 @@
                     <button id="order-btn" class="order-btn">Complete order</button>
                 </div>
             </section>
-            <section class="user-details">
+            <section id="user-details">
+
+                <div class="user-details hidden" id="details-element">
+
+                    <h3>Enter card details</h3>
+                    <form id="details-form">
+                        <input type="text" required placeholder="Enter your name">
+                        <input type="number" required placeholder="Enter card number">
+                        <input type="number" required placeholder="Enter CVV">
+                        <button class="payment-btn" id="pay-btn">Pay</button>
+                    </form>
+
+                </div>
+
 
             </section>
         </div>

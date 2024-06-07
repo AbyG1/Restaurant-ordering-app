@@ -1,6 +1,11 @@
 import menuArray from "./data.js";
 const billSection = document.getElementById('bill')
+const userDetailsElement = document.getElementById('details-element')
 const orderArray = []
+
+document.getElementById('details-form').addEventListener('submit',(e) => {
+        e.preventDefault()
+})
 
 
 
@@ -15,6 +20,13 @@ document.addEventListener('click',(e) => {
                 removeItems(+e.target.dataset.remove)
         }
 
+        if(e.target.id === 'order-btn'){
+                payBill()
+        }
+
+        if(e.target.id === 'pay-btn'){
+                submitDetails()
+        }
         
 
 
@@ -39,8 +51,6 @@ function showBill(foodId){
        
         updateTotalPrice(orderArray)
        
-
-
 
 
 }
@@ -115,7 +125,15 @@ function showBill(foodId){
                
         }
 
+        function payBill(){
+                billSection.classList.add('hidden')
+                userDetailsElement.classList.remove('hidden')
+        }
 
+        function submitDetails(){
+                userDetailsElement.classList.add('hidden')
+        
+        }
 
 
 

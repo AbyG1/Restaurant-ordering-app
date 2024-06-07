@@ -55,7 +55,7 @@ main .container{
     background-color:#F5F5F5 ;
     padding:65px 45px ;
     box-sizing: border-box;
-    position: relative;;
+    position: relative;
 }
 
 
@@ -173,3 +173,50 @@ main .container{
     cursor: pointer;
 }
 
+.user-details{
+    width: 525px;
+    height: 500px;
+    box-shadow: 0 0 10px 1px black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    padding: 32px 23px;
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    margin:auto;
+    background-color: #fff;
+}
+
+.user-details h3 {
+    text-align: center;
+    line-height: 31px;
+    font-size: 24px;
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+input{
+    padding: 15px 30px;
+    margin-bottom: 23px;
+    line-height: 31px;
+    font-size: 20px;
+    width:475px;
+    box-sizing: border-box;
+
+}
+
+.payment-btn{
+    padding: 16px 32px;
+    color: white;
+    background-color: #16DB99;
+    border:none;
+    font-size: 20px;
+    
+}
