@@ -5,8 +5,14 @@ const orderArray = []
 
 document.getElementById('details-form').addEventListener('submit',(e) => {
         e.preventDefault()
+        clearForm();
 })
 
+function clearForm() {
+        document.getElementById('u-name').value = '';
+        document.getElementById('u-card-number').value = '';
+        document.getElementById('u-cvv-number').value = '';
+    }
 
 
 document.addEventListener('click',(e) => {
@@ -34,7 +40,7 @@ document.addEventListener('click',(e) => {
 
 
 function showBill(foodId){
-        
+        document.getElementById('msg').innerHTML = ''
         billSection.classList.remove('hidden')
 
         
@@ -126,13 +132,30 @@ function showBill(foodId){
         }
 
         function payBill(){
-                billSection.classList.add('hidden')
+               while(orderArray.length > 0){
+                orderArray.pop()
+               }
                 userDetailsElement.classList.remove('hidden')
         }
 
         function submitDetails(){
+                billSection.classList.add('hidden')
                 userDetailsElement.classList.add('hidden')
+
+                
+
+                createSuccessMessage()
         
+        }
+
+        function createSuccessMessage(){
+                const messageDiv = document.createElement('div')
+                messageDiv.classList.add('msg')
+                const messagePara = document.createElement('p')
+                messagePara.classList.add('msg-para')
+                messagePara.textContent = 'Thanks James! your order is on its way!'
+                messageDiv.appendChild(messagePara)
+                document.getElementById('msg').appendChild(messageDiv)
         }
 
 
